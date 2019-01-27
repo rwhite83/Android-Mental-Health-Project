@@ -5,9 +5,9 @@
     <string name="searchText">Search</string>
     <string name="instructions">Press the button to put your words to text or input text yourself then press the search button</string>
     <string name="inputBox">write in speak to me</string>
+    <string name="btn911call">CALL 911</string>
+    <string name="BtnSuicidecall">CALL\nSUICIDE\nPREVENTION\nHOTLING</string>
     <!--<string name="app_name">Mental Health Project</string>
-    <string name="app_name">Mental Health Project</string>
-    <string name="app_name">Mental Health Project</string>
     <string name="app_name">Mental Health Project</string>-->
 
 </resources>
