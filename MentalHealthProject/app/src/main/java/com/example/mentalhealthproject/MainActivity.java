@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             EditText messageSent = findViewById(R.id.inputText);
             String messageText = messageSent.getText().toString();
             Intent intent = new Intent(this, keywordMatches.class);
-            String[] messageArray = messageText.split("[\\p{Punct}\\s]+");
+            String[] messageArray = messageText.split("\\s");
             // string.split smf put tresulting thing into extra
             intent.putExtra("msg", messageArray);
             startActivity(intent);
