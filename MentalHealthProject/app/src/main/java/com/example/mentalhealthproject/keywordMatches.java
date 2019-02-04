@@ -2,14 +2,19 @@ package com.example.mentalhealthproject;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.content.Intent;
+import android.widget.ListView;
+
 import java.util.ArrayList;
 
 
 public class keywordMatches extends ListActivity {
 
     public static final String EXTRA_MESSAGE = "msg";
+
+    ArrayList<String> keywordArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +25,7 @@ public class keywordMatches extends ListActivity {
 
         String[] keywordArray = intent.getStringArrayExtra(EXTRA_MESSAGE);
 
-        ArrayList<String> keywordArrayList = new ArrayList<>();
+        keywordArrayList = new ArrayList<>();
 
         int arraySize = keywordArray.length;
 
@@ -31,28 +36,14 @@ public class keywordMatches extends ListActivity {
         ArrayAdapter<String> keywordAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, keywordArrayList);
         setListAdapter(keywordAdapter);
 
+    }
 
-        //String messageText = intent.getStringExtra(EXTRA_MESSAGE);
-
-/*        StringTokenizer st = new StringTokenizer(messageText);
-        String[] result = messageText.split("\\s");*/
-
-/*        ArrayList<String> listItemsArrayList = new ArrayList<>();
-
-        for(int i; result[i] != null; i++)
-            listItemsArrayList.add(result[i]);
-        }
-
-        ListView thisList = findViewById(R.id.list);
-        thisList.setAdapter(result);
-
-        ArrayAdapter ad = new ArrayAdapter(ListActivity.this, android.R.)*/
-
-/*        TextView messageView1 = findViewById(R.id.text1);
-        messageView1.setText(result[0]);
-
-        TextView messageView2 = findViewById(R.id.text2);
-        messageView2.setText(result[1]);*/
+    @Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        Intent i = new Intent(this, ServicesList.class);
+        String thisString = keywordArrayList.get(position).toString();
+        i.putExtra("type", thisString);
+        startActivity(i);
     }
 
 
