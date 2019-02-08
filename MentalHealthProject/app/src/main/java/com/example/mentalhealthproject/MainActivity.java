@@ -65,6 +65,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(switchIntent);
     }
 
+    public void BtnSeviceList(View v) {
+        Intent switchIntent = new Intent(this, ServicesList.class);
+        startActivity(switchIntent);
+    }
+
+
 
 
 

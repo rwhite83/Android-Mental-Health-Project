@@ -81,4 +81,21 @@
         app:layout_constraintVertical_bias="0.987"
         tools:text="@string/instructions" />
 
+    <Button
+        android:id="@+id/serviceList"
+        android:layout_width="243dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="BtnSeviceList"
+        android:text="@string/servicesList"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.796"
+        tools:text="@string/servicesList" />
+
 </android.support.constraint.ConstraintLayout>
