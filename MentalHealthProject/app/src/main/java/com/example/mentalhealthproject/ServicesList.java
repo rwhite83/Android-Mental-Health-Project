@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+<<<<<<< HEAD
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -14,6 +15,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 
+=======
+import android.widget.TextView;
+>>>>>>> 56fb0735481525bf24857d9272a945dd77b2eff2
 
 public class ServicesList extends AppCompatActivity {
     private String TAG = ServicesList.class.getSimpleName();
@@ -28,6 +32,7 @@ public class ServicesList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_services_list);
 
+<<<<<<< HEAD
         toonList = new ArrayList<Toon>();
         lv = (ListView) findViewById(R.id.toonList);
         new GetContacts().execute();
@@ -126,5 +131,16 @@ public class ServicesList extends AppCompatActivity {
             lv.setAdapter(adapter);
         }
     }
+=======
+
+        String thePain = getIntent().getExtras().get("type").toString();
+
+        TextView testView = findViewById(R.id.testView);
+        testView.setText(thePain);
+    }
+
+
+
+>>>>>>> 56fb0735481525bf24857d9272a945dd77b2eff2
 
 }
